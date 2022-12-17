@@ -1,10 +1,10 @@
-import Container from "./Container";
 import Form from "./Form";
+import Container from "./Container";
 
 function App() {
   return (
     <Container>
-  <Form />
+      <Form />
     </Container>
   );
 }
