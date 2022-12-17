@@ -1,6 +1,11 @@
+import Container from "./Container";
+import Form from "./Form";
+
 function App() {
   return (
- <div>testowy tekst</div>
+    <Container>
+  <Form />
+    </Container>
   );
 }
 
