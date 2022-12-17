@@ -1,6 +1,5 @@
 html {
     box-sizing: border-box;
-
 }
 
 *, ::after, ::before {
@@ -9,4 +8,11 @@ html {
 
 body {
     font-family: "Poppins";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url("../public/backgrund.jpg");
+    background-size: cover;
+    background-position: center;
 }
