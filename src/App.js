@@ -8,6 +8,10 @@ function App() {
       <form className="form">
         <fieldset className="form__fieldset">
           <Legend title="Kalkulator walut" />
+          <Section
+          title ="Waluta:"
+          body
+          />
           <label className="form__label">
             Waluta:
           </label>
@@ -33,7 +37,7 @@ function App() {
           </p>
           <p>
             <span className="form__textInformation">*aktualny kurs walut na dzień 31.10.2022</span>
-          </p>
+          </p>>
         </fieldset>
       </form>
     </Container>
