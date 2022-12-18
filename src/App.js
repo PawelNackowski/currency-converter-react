@@ -13,10 +13,19 @@ function App() {
       <form className="form">
         <fieldset className="form__fieldset">
           <Legend title="Kalkulator walut" />
-          <Section title="Waluta:" body={<Select />} />
-          <Section title="Kwota:" body={<AmountInput />} />
+          <Section
+            title="Waluta:"
+            body={<Select />}
+          />
+          <Section
+            title="Kwota:"
+            body={<AmountInput />}
+          />
           <Result />
-          <Information input={<InformationInput />} text="*aktualny kurs walut na dzień 31.10.2022" />
+          <Information
+            input={<InformationInput />}
+            text="*aktualny kurs walut na dzień 31.10.2022"
+          />
         </fieldset>
       </form>
     </Container>
