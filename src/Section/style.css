@@ -45,3 +45,8 @@
 .form__textInformation {
   font-size: 12px;
 }
+
+.form__valuePosition {
+  display: flex;
+  justify-content: flex-end;
+}
