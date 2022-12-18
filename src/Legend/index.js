@@ -1,4 +1,4 @@
-const Legend = ({title}) => (
+const Legend = ({ title }) => (
   <legend className="form__legend">{title}</legend>
 );
 
