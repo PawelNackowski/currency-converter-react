@@ -9,12 +9,20 @@ import Information from "./Information";
 import InformationInput from "./InformationInput";
 
 function App() {
-  const [currency, setCurrency] = useState([
-    { id: 1, content: "--wybierz walutę--", value: "0.00" },
-    { id: 2, content: "EURO", value: "4.7199" },
-    { id: 3, content: "USD", value: "4.7477" },
-    { id: 4, content: "CHF", value: "4.7705" },
-  ]);
+  const currencies= [
+    { id: 1, name: "--wybierz walutę--", rate: 0.00 },
+    { id: 2, name: "EURO", rate: 4.7199 },
+    { id: 3, name: "USD", rate: 4.7477 },
+    { id: 4, name: "CHF", rate: 4.7705 },
+  ];
+
+const [amount, setAmount] = useState ("")
+
+  const [currency, setCurrency] = useState(currencies[0].name);
+
+  const isExchangeRate = currencies.find(({name}) => currency === name ).rate;
+console.log (isExchangeRate);
+
 
   return (
 
@@ -25,16 +33,18 @@ function App() {
           <Section
             title="Waluta:"
             body={<Select
-              currency={currency}
+              currencies={currencies}
+              setCurrency={setCurrency}
             />}
           />
           <Section
             title="Kwota:"
-            body={<AmountInput />}
+            body={<AmountInput amount={amount} setAmount={setAmount} />}
           />
-          <Result />
+          <Result
+            AmountInput={AmountInput} setAmount={setAmount} amount={amount} />
           <Information
-            input={<InformationInput />}
+            input={<InformationInput isExchangeRate={isExchangeRate}/>}
             text="*aktualny kurs walut na dzień 31.10.2022"
           />
         </fieldset>

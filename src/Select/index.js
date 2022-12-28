@@ -1,7 +1,10 @@
-const Select = ({ currency }) => (
-  <select className="form__field">
-    {currency.map(task => (
-      <option key={task.id}>{task.content}</option>
+const Select = ({ currencies, currency, setCurrency }) => (
+  <select
+    className="form__field"
+    value={currency}
+    onChange={({ target }) => setCurrency(target.value)}>
+    {currencies.map(currency => (
+      <option key={currency.id} value={currency.name}>{currency.name}</option>
     ))}
   </select>
 );
