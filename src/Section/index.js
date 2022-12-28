@@ -1,11 +1,14 @@
 import './style.css'
 
 const Section = ({ title, body }) => (
-  <><label className="form__label">
-    {title}
-  </label><p>
+  <>
+    <label className="form__label">
+      {title}
+    </label>
+    <p>
       {body}
-    </p></>
+    </p>
+  </>
 );
 
 export default Section;
