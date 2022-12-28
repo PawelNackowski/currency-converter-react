@@ -11,9 +11,9 @@ import InformationInput from "./InformationInput";
 function App() {
   const currencies = [
     { id: 1, name: "--wybierz walutę--", rate: 0.00 },
-    { id: 2, name: "EURO", rate: 4.7199 },
-    { id: 3, name: "USD", rate: 4.7477 },
-    { id: 4, name: "CHF", rate: 4.7705 },
+    { id: 2, name: "EURO", rate: 4.6763 },
+    { id: 3, name: "USD", rate: 4.4004 },
+    { id: 4, name: "CHF", rate: 4.7531 },
   ];
 
   const [amount, setAmount] = useState("")
@@ -40,7 +40,7 @@ function App() {
             AmountInput={AmountInput} amount={amount} isExchangeRate={isExchangeRate} />
           <Information
             input={<InformationInput isExchangeRate={isExchangeRate} />}
-            text="*aktualny kurs walut na dzień 31.10.2022"
+            text="*aktualny kurs walut na dzień 28.12.2022"
           />
         </fieldset>
       </form>
