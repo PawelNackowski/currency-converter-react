@@ -1,5 +1,6 @@
 .container {
-  min-width: 700px;
+  display: flex;
+  flex-basis: 700px;
 }
 
 .form__fieldset {
@@ -23,7 +24,7 @@
 
 .form__field {
   margin-bottom: 10px;
-  width: 100%;
+  max-width: 100%;
   padding: 10px;
   border-radius: 5px;
   border-color: #ccc;
