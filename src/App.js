@@ -29,9 +29,7 @@ function App() {
           <Legend title="Kalkulator walut" />
           <Section
             title="Waluta:"
-            body={<Select
-              currencies={currencies}
-              setCurrency={setCurrency}
+            body={<Select currencies={currencies} setCurrency={setCurrency}
             />}
           />
           <Section
