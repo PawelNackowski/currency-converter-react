@@ -1,7 +1,7 @@
 import "./style.css"
 
 const Container = (props) => (
-  <main className="container">
+  <main>
   {props.children}
   </main>
 );
