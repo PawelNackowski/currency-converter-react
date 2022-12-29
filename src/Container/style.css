@@ -1,7 +1,4 @@
-.container {
-  display: flex;
-  flex-basis: 700px;
-}
+
 
 .form__fieldset {
   background-color: white;
@@ -52,6 +49,5 @@
 }
 
 .form__valuePosition {
-  display: flex;
   justify-content: flex-end;
 }

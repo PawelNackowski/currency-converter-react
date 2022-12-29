@@ -23,8 +23,8 @@ function App() {
 
   return (
 
-    < Container >
-      <form className="form">
+    <Container>
+      <form>
         <fieldset className="form__fieldset">
           <Legend title="Kalkulator walut" />
           <Section

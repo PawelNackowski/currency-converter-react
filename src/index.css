@@ -12,7 +12,11 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: url("../public/backgrund.jpg");
+    background: url("../public/images/backgrund.jpg");
     background-size: cover;
     background-position: center;
+}
+
+.container {
+    flex-basis: 600px;
 }
