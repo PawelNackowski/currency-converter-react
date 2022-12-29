@@ -1,5 +1,3 @@
-
-
 .form__fieldset {
   background-color: white;
   margin: 5px;
@@ -42,7 +40,6 @@
   border-radius: 5px;
   border-color: #ccc;
 }
-
 
 .form__textInformation {
   font-size: 12px;
