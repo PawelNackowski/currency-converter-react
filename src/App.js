@@ -19,7 +19,7 @@ function App() {
   const [amount, setAmount] = useState("")
   const [currency, setCurrency] = useState(currencies[0].name);
 
-  const isExchangeRate = currencies.find(({ name }) => currency === name).rate;
+  const exchangeRate = currencies.find(({ name }) => currency === name).rate;
 
   return (
 
@@ -37,9 +37,9 @@ function App() {
             body={<AmountInput amount={amount} setAmount={setAmount} />}
           />
           <Result
-            AmountInput={AmountInput} amount={amount} isExchangeRate={isExchangeRate} />
+            AmountInput={AmountInput} amount={amount} exchangeRate={exchangeRate} />
           <Information
-            input={<InformationInput isExchangeRate={isExchangeRate} />}
+            input={<InformationInput exchangeRate={exchangeRate} />}
             text="*aktualny kurs walut na dzień 28.12.2022"
           />
         </fieldset>

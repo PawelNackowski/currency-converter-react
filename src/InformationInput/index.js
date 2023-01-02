@@ -1,9 +1,9 @@
-const InformationInput = ({ isExchangeRate }) => (
+const InformationInput = ({ exchangeRate }) => (
   <p>
     <input
       className="form__fieldInformation"
       name="sume"
-      value={isExchangeRate}
+      value={exchangeRate}
       readOnly
     />*
   </p>

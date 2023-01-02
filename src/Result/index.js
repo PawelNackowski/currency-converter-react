@@ -1,5 +1,5 @@
-const Result = ({ amount, isExchangeRate }) => {
-  const getResult = amount * isExchangeRate;
+const Result = ({ amount, exchangeRate }) => {
+  const getResult = amount * exchangeRate;
   return (
     <p>
       <span className="form__valuePosition">
