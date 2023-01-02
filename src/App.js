@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import Legend from "./Legend";
 import Section from "./Section";
 import Select from "./Select";
