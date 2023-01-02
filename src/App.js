@@ -2,7 +2,6 @@ import { useState } from "react"
 import Select from "./Select";
 import Result from "./Result"
 
-
 function App() {
   const currencies = [
     { id: 1, name: "--wybierz walutę--", rate: 0.00 },
