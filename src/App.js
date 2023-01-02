@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import Legend from "./Legend";
-import Container from "./Container";
 import Section from "./Section";
 import Select from "./Select";
 import AmountInput from "./AmountInput";
@@ -22,8 +21,6 @@ function App() {
   const exchangeRate = currencies.find(({ name }) => currency === name).rate;
 
   return (
-
-    <Container>
       <form>
         <fieldset className="form__fieldset">
           <Legend title="Kalkulator walut" />
@@ -44,7 +41,6 @@ function App() {
           />
         </fieldset>
       </form>
-    </Container>
   );
 }
 
