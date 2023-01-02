@@ -1,9 +1,7 @@
 import { useState } from "react"
 import Select from "./Select";
-import AmountInput from "./AmountInput";
 import Result from "./Result"
-import Information from "./Information";
-import InformationInput from "./InformationInput";
+
 
 function App() {
   const currencies = [
@@ -34,16 +32,21 @@ function App() {
         <label className="form__label">
           Kwota
         </label>
-        <AmountInput 
-        amount={amount} 
-        setAmount={setAmount} 
-        />
         <Result
-          AmountInput={AmountInput} amount={amount} exchangeRate={exchangeRate} />
-        <Information
-          input={<InformationInput exchangeRate={exchangeRate} />}
-          text="*aktualny kurs walut na dzień 28.12.2022"
+          amount={amount}
+          exchangeRate={exchangeRate}
+          setAmount={setAmount}
         />
+        <p>
+          <input
+            className="form__fieldInformation"
+            name="sume"
+            value={exchangeRate}
+            readOnly />*
+        </p>
+        <div className="form__textInformation">
+          *aktualny kurs walut na dzień 28.12.2022
+        </div>
       </fieldset>
     </form>
   );
