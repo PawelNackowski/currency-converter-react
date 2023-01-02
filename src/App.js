@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Legend from "./Legend";
 import Section from "./Section";
 import Select from "./Select";
 import AmountInput from "./AmountInput";
@@ -23,7 +22,7 @@ function App() {
   return (
       <form>
         <fieldset className="form__fieldset">
-          <Legend title="Kalkulator walut" />
+        <legend className="form__legend">Kalkulator walut</legend>
           <Section
             title="Waluta:"
             body={<Select currencies={currencies} setCurrency={setCurrency}
