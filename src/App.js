@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Section from "./Section";
 import Select from "./Select";
 import AmountInput from "./AmountInput";
 import Result from "./Result"
@@ -20,26 +19,33 @@ function App() {
   const exchangeRate = currencies.find(({ name }) => currency === name).rate;
 
   return (
-      <form>
-        <fieldset className="form__fieldset">
-        <legend className="form__legend">Kalkulator walut</legend>
-          <Section
-            title="Waluta:"
-            body={<Select currencies={currencies} setCurrency={setCurrency}
-            />}
-          />
-          <Section
-            title="Kwota:"
-            body={<AmountInput amount={amount} setAmount={setAmount} />}
-          />
-          <Result
-            AmountInput={AmountInput} amount={amount} exchangeRate={exchangeRate} />
-          <Information
-            input={<InformationInput exchangeRate={exchangeRate} />}
-            text="*aktualny kurs walut na dzień 28.12.2022"
-          />
-        </fieldset>
-      </form>
+    <form>
+      <fieldset className="form__fieldset">
+        <legend className="form__legend">
+          Kalkulator walut
+        </legend>
+        <label className="form__label">
+          Waluta
+        </label>
+        <Select
+          currencies={currencies}
+          setCurrency={setCurrency}
+        />
+        <label className="form__label">
+          Kwota
+        </label>
+        <AmountInput 
+        amount={amount} 
+        setAmount={setAmount} 
+        />
+        <Result
+          AmountInput={AmountInput} amount={amount} exchangeRate={exchangeRate} />
+        <Information
+          input={<InformationInput exchangeRate={exchangeRate} />}
+          text="*aktualny kurs walut na dzień 28.12.2022"
+        />
+      </fieldset>
+    </form>
   );
 }
 
