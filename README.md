@@ -2,6 +2,8 @@
 
  It's a simple currency calculator which you can recalculate walutes on PLN on live. You just need to choose walutes, and write some amount and the result can you see at the boottom. 
 
+ This calculator shows the current time.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ![Demo.gif](public/images/demo.gif)
@@ -17,6 +19,7 @@ Data currency may be out of date.
 - JavaScript
 - Normalize
 - BEM
+- useEfect
 
 ## Available Scripts
 
