@@ -16,15 +16,13 @@ function App() {
 
   const exchangeRate = currencies.find(({ name }) => currency === name).rate;
 
-
-  
   return (
     <form>
       <fieldset className="form__fieldset">
         <legend className="form__legend">
           Kalkulator walut
         </legend>
-    <Clock  />
+        <Clock />
         <label className="form__label">
           Waluta
         </label>
