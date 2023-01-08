@@ -2,7 +2,7 @@ import { useState } from "react";
 import Select from "./Select";
 import Result from "./Result";
 import Clock from "./Clock";
-import "./style.css"
+import { Fieldset, Legend, Label, Input, Information } from "./styled"
 
 const currencies = [
   { id: 1, name: "--wybierz walutę--", rate: 0.00 },
@@ -16,41 +16,36 @@ const Form = () => {
   const [currency, setCurrency] = useState(currencies[0].name);
 
   const exchangeRate = currencies.find(({ name }) => currency === name).rate;
-return (
-  <form>
-    <fieldset className="form__fieldset">
-      <legend className="form__legend">
-        Kalkulator walut
-      </legend>
-      <Clock />
-      <label className="form__label">
-        Waluta
-      </label>
-      <Select
-        currencies={currencies}
-        setCurrency={setCurrency}
-      />
-      <label className="form__label">
-        Kwota
-      </label>
-      <Result
-        amount={amount}
-        exchangeRate={exchangeRate}
-        setAmount={setAmount}
-      />
-      <p>
-        <input
-          className="form__fieldInformation"
-          name="sume"
-          value={exchangeRate}
-          readOnly />*
-      </p>
-      <div className="form__textInformation">
-        *aktualny kurs walut na dzień 28.12.2022
-      </div>
-    </fieldset>
-  </form>
-)
+  return (
+    <form>
+      <Fieldset>
+        <Legend>
+          Kalkulator walut
+        </Legend>
+        <Clock />
+        <Label>Waluta</Label>
+        <Select
+          currencies={currencies}
+          setCurrency={setCurrency}
+        />
+        <Label>Kwota</Label>
+        <Result
+          amount={amount}
+          exchangeRate={exchangeRate}
+          setAmount={setAmount}
+        />
+        <p>
+          <Input
+            name="sume"
+            value={exchangeRate}
+            readOnly />*
+        </p>
+        <Information>
+          *aktualny kurs walut na dzień 28.12.2022
+        </Information>
+      </Fieldset>
+    </form>
+  )
 };
 
 export default Form;
