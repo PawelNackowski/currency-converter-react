@@ -6,7 +6,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![Demo.gif](public/images/demo.gif)
+![Demo.gif](./demo.gif)
 ## Attention !
 Data currency may be out of date.
 ## Demo
