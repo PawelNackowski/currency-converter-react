@@ -1,3 +1,7 @@
+import { createGlobalStyle } from "styled-components";
+import background from "./images/backgrund.jpg"
+
+export const GLobalStyle = createGlobalStyle`
 html {
     box-sizing: border-box;
 }
@@ -12,7 +16,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: url("../public/images/backgrund.jpg");
+    background: url("${background}");
     background-size: cover;
     background-position: center;
 }
@@ -20,3 +24,4 @@ body {
 .flexContainer {
     flex-basis: 600px;
 }
+`;
