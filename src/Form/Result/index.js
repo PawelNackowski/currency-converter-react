@@ -19,3 +19,9 @@ const Result = ({ amount, exchangeRate, setAmount }) => {
 };
 
 export default Result;
+
+
+// .form__valuePosition {
+//   display: flex;
+//   justify - content: flex - end;
+// }

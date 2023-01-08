@@ -1,6 +1,7 @@
+import { StyledSelect } from "./styled"
+
 const Select = ({ currencies, currency, setCurrency }) => (
-  <select
-    className="form__field"
+  <StyledSelect
     value={currency}
     onChange={({ target }) => setCurrency(target.value)}
   >
@@ -12,7 +13,7 @@ const Select = ({ currencies, currency, setCurrency }) => (
         {currency.name}
       </option>
     ))}
-  </select>
+  </StyledSelect>
 );
 
 export default Select;
