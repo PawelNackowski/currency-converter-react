@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import "./style.css";
+import { useCurrentDate } from "./useCurrentDate";
 
 const formatedDate = (date) => date.toLocaleDateString(undefined, {
   weekday: "long",
@@ -11,17 +11,7 @@ const formatedDate = (date) => date.toLocaleDateString(undefined, {
 });
 
 const Clock = () => {
-  const [date, setDate] = useState(new Date());
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setDate(new Date());
-    }, 1000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
+  const date = useCurrentDate();
 
   return (
     <div className="clock">
