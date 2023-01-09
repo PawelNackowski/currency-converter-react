@@ -10,7 +10,8 @@ const Result = ({ amount, exchangeRate, setAmount }) => {
         value={amount}
         autoFocus
         onChange={({ target }) => setAmount(target.value)}
-        min="1" />
+        min="1"
+      />
       <p>
         <Value>
           Kwota w PLN : <strong>{getResult.toFixed(2)}</strong>
