@@ -20,16 +20,16 @@ export const Legend = styled.legend`
 `;
 
 export const Label = styled.label`
-  padding-top: 15px;
   font-style: italic;
 `;
 
-export const Input = styled.input`
+export const Rate = styled.div`
+  padding: 5px;
+  border: 1px solid #aaa;
   background-color: #eee;
-  margin-top: 30px;
+  margin-bottom: 20px;
   width: 75px;
   border-radius: 5px;
-  border-color: #ccc;
 `;
 
 export const Information = styled.div`

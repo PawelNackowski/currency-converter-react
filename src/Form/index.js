@@ -2,7 +2,7 @@ import { useState } from "react";
 import Select from "./Select";
 import Result from "./Result";
 import Clock from "./Clock";
-import { Fieldset, Legend, Label, Input, Information } from "./styled"
+import { Fieldset, Legend, Label, Rate, Information } from "./styled"
 
 const currencies = [
   { id: 1, name: "--wybierz walutę--", rate: 0.00 },
@@ -34,12 +34,9 @@ const Form = () => {
           exchangeRate={exchangeRate}
           setAmount={setAmount}
         />
-        <p>
-          <Input
-            name="sume"
-            value={exchangeRate}
-            readOnly />*
-        </p>
+        <Rate>
+          {exchangeRate}*
+        </Rate>
         <Information>
           *aktualny kurs walut na dzień 28.12.2022
         </Information>
