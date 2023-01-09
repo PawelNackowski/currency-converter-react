@@ -12,11 +12,9 @@ const Result = ({ amount, exchangeRate, setAmount }) => {
         onChange={({ target }) => setAmount(target.value)}
         min="1"
       />
-      <p>
-        <Value>
-          Kwota w PLN : <strong>{getResult.toFixed(2)}</strong>
-        </Value>
-      </p>
+      <Value>
+        Kwota w PLN : <strong>{getResult.toFixed(2)}</strong>
+      </Value>
     </>
   )
 };
