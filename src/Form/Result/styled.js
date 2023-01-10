@@ -11,9 +11,9 @@ export const Input = styled.input`
   width: 100%;
   padding: 10px;
   border-radius: 5px;
-  border-color: #ccc;
+  border-color: ${({theme}) => theme.color.gray};
 
   &:hover {
-    background-color: hsl(0, 0%, 95%);
+    filter: brightness(95%);
   }
 `;

@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
 export const Fieldset = styled.fieldset`
-  background-color: white;
+  background-color: ${({theme}) => theme.color.white};
   margin: 5px;
   padding: 5px 50px;
-  border-color: #eee;
+  border-color: ${({theme}) => theme.color.lightGray};
   border-radius: 5px;
   box-shadow: 3px 3px 15px 0px rgba(102, 102, 102, 0.37);
 `;
 
 export const Legend = styled.legend`
-  background-color: teal;
-  color: white;
+  background-color: ${({theme}) => theme.color.teal};
+  color: ${({theme}) => theme.color.white};
   border-radius: 5px;
   padding: 15px;
   font-size: 20px;
-  border-color: #eee;
+  border-color: ${({theme}) => theme.color.lightGray};
   box-shadow: 3px 3px 15px 0px rgba(102, 102, 102, 0.37);
 `;
 
@@ -25,8 +25,8 @@ export const Label = styled.label`
 
 export const Rate = styled.div`
   padding: 5px;
-  border: 1px solid #aaa;
-  background-color: #eee;
+  border: 1px solid ${({theme}) => theme.color.darkGray};
+  background-color: ${({theme}) => theme.color.lightGray};
   margin-bottom: 20px;
   width: 75px;
   border-radius: 5px;

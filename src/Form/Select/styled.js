@@ -6,9 +6,9 @@ export const StyledSelect = styled.select`
   width: 100%;
   padding: 10px;
   border-radius: 5px;
-  border-color: #ccc;
+  border-color: ${({theme}) => theme.color.gray};
 
   &:hover {
-    background-color: hsl(0, 0%, 95%);
+    filter: brightness(95%);
   }
 `;
