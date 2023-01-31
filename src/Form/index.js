@@ -63,7 +63,7 @@ const Form = () => {
                     *Kursy walutu pobrane z Europejskiego Banku Centralnego
                 </Information>
               </>
-            ))};
+            ))}
       </Fieldset>
     </form>
   )
