@@ -6,7 +6,7 @@ import { Fieldset, Legend, Label, Rate, Information } from "./styled"
 import { useRatesData } from "./useRatesData";
 
 const Form = () => {
-  const [amount, setAmount] = useState("1")
+  const [amount, setAmount] = useState("")
   const [currency, setCurrency] = useState("EUR");
 
   const ratesData = useRatesData();
