@@ -27,7 +27,7 @@ export const Rate = styled.div`
   padding: 5px;
   border: 1px solid ${({theme}) => theme.color.darkGray};
   background-color: ${({theme}) => theme.color.lightGray};
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   width: 75px;
   border-radius: 5px;
 `;

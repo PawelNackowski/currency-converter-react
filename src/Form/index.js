@@ -11,7 +11,7 @@ const Form = () => {
 
   const ratesData = useRatesData();
 
-  const setRate = () => {
+  const getRate = () => {
     const rate = ratesData.rates[currency];
   if (ratesData.state === "success") {
     return 1/rate;
@@ -51,10 +51,10 @@ const Form = () => {
                   setAmount={setAmount}
                 />
                 <Rate>
-                  {setRate().toFixed(3)}*
+                  {getRate().toFixed(3)}*
                 </Rate>
                 <Information>
-                  *aktualny kurs walut na dzień 28.12.2022
+                    *Kursy walutu pobrane z Europejskiego Banku Centralnego
                 </Information>
               </>
             ))}
