@@ -6,7 +6,7 @@ import { Fieldset, Legend, Label, Rate, Information } from "./styled"
 import { useRatesData } from "./useRatesData";
 
 const Form = () => {
-  const [amount, setAmount] = useState("")
+  const [amount, setAmount] = useState("1")
   const [currency, setCurrency] = useState("EUR");
 
   const ratesData = useRatesData();
@@ -34,7 +34,8 @@ const Form = () => {
           : (
             ratesData.state === "error" ? (
               <p>
-                Nastąpił błąd przy pobieraniu danych...
+                Nastąpił błąd przy pobieraniu danych...<br/>
+                Sprawdź swoje połączenie z internetem, albo skontaktuj się z usługodawcą strony.
               </p>
             ) : (
               <>
@@ -47,7 +48,7 @@ const Form = () => {
                 <Label>Kwota</Label>
                 <Result
                   amount={amount}
-                  // exchangeRate={exchangeRate}
+                  getRate={getRate()}
                   setAmount={setAmount}
                 />
                 <Rate>
