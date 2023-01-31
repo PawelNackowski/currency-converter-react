@@ -2,6 +2,7 @@ import { useState, } from "react";
 import Select from "./Select";
 import Result from "./Result";
 import Clock from "./Clock";
+import Spinner from "./spiner";
 import { Fieldset, Legend, Label, Rate, Information } from "./styled"
 import { useRatesData } from "./useRatesData";
 
@@ -26,11 +27,9 @@ const Form = () => {
         </Legend>
         <Clock />
         {ratesData.state === "loading"
-          ? (
-            <p>
-              Trwa ładowanie kursów walut...
-            </p>
-          )
+          ?(           
+            <Spinner/>
+           )
           : (
             ratesData.state === "error" ? (
               <p>
