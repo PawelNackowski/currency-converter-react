@@ -6,11 +6,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![Demo.gif](./demo.gif)
-## Attention !
-Data currency may be out of date.
 ## Demo
-[Link](https://pawelnackowski.github.io/currency-converter-react)
+[Demo website](https://pawelnackowski.github.io/currency-converter-react)
+
+![Demo.gif](./demo.gif)
+
+## Currencies
+
+Currencies are fetched from exchangerate.host
 
 ## Technologies used
 - React
@@ -20,6 +23,8 @@ Data currency may be out of date.
 - Normalize
 - BEM
 - useEfect
+- API
+- react hook
 
 ## Available Scripts
 
