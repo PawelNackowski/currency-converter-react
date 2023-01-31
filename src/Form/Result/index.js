@@ -1,7 +1,7 @@
 import { Value, Input } from "./styled";
 
-const Result = ({ amount, exchangeRate, setAmount }) => {
-  const getResult = amount * exchangeRate;
+const Result = ({ amount, getRate, setAmount }) => {
+  const getResult = amount * getRate;
 
   return (
     <>
