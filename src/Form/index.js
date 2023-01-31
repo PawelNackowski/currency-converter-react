@@ -3,7 +3,7 @@ import Select from "./Select";
 import Result from "./Result";
 import Clock from "./Clock";
 import Spinner from "./spiner";
-import { Fieldset, Legend, Label, Rate, Information } from "./styled"
+import { Fieldset, Legend, Label, Rate, Information } from "./styled";
 import { useRatesData } from "./useRatesData";
 
 const Form = () => {
@@ -21,7 +21,7 @@ const Form = () => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-  }
+  };
 
   return (
     <form onSubmit={onFormSubmit}>
@@ -63,7 +63,7 @@ const Form = () => {
                     *Kursy walutu pobrane z Europejskiego Banku Centralnego
                 </Information>
               </>
-            ))}
+            ))};
       </Fieldset>
     </form>
   )

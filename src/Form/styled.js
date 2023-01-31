@@ -37,6 +37,14 @@ export const Information = styled.div`
   margin-bottom: 20px;
 `;
 
+export const Wrapper = styled.div`
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+`
+
 export const Loader = styled.div`
   margin: 40px;
   border: 10px solid #f3f3f3;
@@ -60,11 +68,3 @@ export const Loader = styled.div`
   height: 80px;
   }
 `;
-
-export const Wrapper = styled.div`
-  padding: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items:center;
-`

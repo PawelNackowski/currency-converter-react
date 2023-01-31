@@ -1,4 +1,5 @@
-import {Loader, Wrapper} from "./styled"
+import {Loader, Wrapper} from "./styled";
+
 const Spinner = () => 
   <Wrapper>
     <Loader />

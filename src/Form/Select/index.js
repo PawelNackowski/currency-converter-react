@@ -1,4 +1,4 @@
-import { StyledSelect } from "./styled"
+import { StyledSelect } from "./styled";
 
 const Select = ({ ratesData, currency, setCurrency }) => (
   <StyledSelect
