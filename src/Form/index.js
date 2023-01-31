@@ -19,8 +19,12 @@ const Form = () => {
     };
   };
 
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+  }
+
   return (
-    <form>
+    <form onSubmit={onFormSubmit}>
       <Fieldset>
         <Legend>
           Kalkulator walut
@@ -40,12 +44,14 @@ const Form = () => {
               <>
                 <Label>Waluta</Label>
                 <Select
+                onFormSubmit={onFormSubmit}
                   ratesData={ratesData}
                   currency={currency}
                   setCurrency={setCurrency}
                 />
                 <Label>Kwota</Label>
                 <Result
+                    
                   amount={amount}
                   getRate={getRate()}
                   setAmount={setAmount}
