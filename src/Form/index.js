@@ -14,9 +14,10 @@ const Form = () => {
 
   const getRate = () => {
     const rate = ratesData.rates[currency];
-  if (ratesData.status === "success") {
-    return 1/rate;
-    };
+
+      if (ratesData.status === "success") {
+          return 1/rate;
+          };
   };
 
   const onFormSubmit = (event) => {
@@ -31,9 +32,9 @@ const Form = () => {
         </Legend>
         <Clock />
         {ratesData.status === "loading"
-          ?(           
-            <Spinner/>
-           )
+          ? (           
+              <Spinner/>
+            )
           : (
             ratesData.status === "error" ? (
               <p>
