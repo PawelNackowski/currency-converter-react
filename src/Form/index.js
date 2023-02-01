@@ -14,7 +14,7 @@ const Form = () => {
 
   const getRate = () => {
     const rate = ratesData.rates[currency];
-  if (ratesData.state === "success") {
+  if (ratesData.status === "success") {
     return 1/rate;
     };
   };
@@ -30,12 +30,12 @@ const Form = () => {
           Kalkulator walut
         </Legend>
         <Clock />
-        {ratesData.state === "loading"
+        {ratesData.status === "loading"
           ?(           
             <Spinner/>
            )
           : (
-            ratesData.state === "error" ? (
+            ratesData.status === "error" ? (
               <p>
                 Nastąpił błąd przy pobieraniu danych...<br/>
                 Sprawdź swoje połączenie z internetem, albo skontaktuj się z usługodawcą strony.
