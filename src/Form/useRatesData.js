@@ -1,6 +1,11 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
+const API_KEY = "aa4376feeda15ac6015fe24e";
+const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/PLN`;
+
+const targetCurrency = ["EUR", "PLN", "USD", "GBP"]
+
 export const useRatesData = () => {
   const [ratesData, setRatesData] = useState({
     status: "loading",
@@ -9,16 +14,21 @@ export const useRatesData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://api.exchangerate.host/latest?base=PLN&symbols=EUR,USD,CHF,GBP");
-        const { rates, date } = await response.data;
+        const response = await axios.get(API_URL);
+        const { conversion_rates }= await response.data;
+
+        const filterData = Object.fromEntries(
+          Object.entries(conversion_rates).filter(([currency]) => 
+          targetCurrency.includes(currency) )
+        ); 
 
         setRatesData({
           status: "success",
-          rates,
-          date,
+          conversion_rates: filterData, 
         });
       }
-      catch {
+      catch (error) {
+        console.log(error);
         setRatesData({
           status: "error",
         });
