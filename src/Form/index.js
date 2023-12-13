@@ -13,11 +13,10 @@ const Form = () => {
   const ratesData = useRatesData();
 
   const getRate = () => {
-    const rate = ratesData.rates[currency];
-
-      if (ratesData.status === "success") {
-          return 1/rate;
-          };
+    if (ratesData.status === "success" && ratesData.conversion_rates) {
+      const rate = ratesData.conversion_rates[currency];
+      return 1 / rate;
+    }
   };
 
   const onFormSubmit = (event) => {
@@ -37,6 +36,7 @@ const Form = () => {
             )
           : (
             ratesData.status === "error" ? (
+              console.log("błąd w pobieraniu"),
               <p>
                 Nastąpił błąd przy pobieraniu danych...<br/>
                 Sprawdź swoje połączenie z internetem, albo skontaktuj się z usługodawcą strony.
