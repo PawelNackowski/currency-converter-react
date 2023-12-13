@@ -61,7 +61,7 @@ const Form = () => {
                   {getRate().toFixed(3)}*
                 </Rate>
                 <Information>
-                    *Kursy walutu pobrane z Europejskiego Banku Centralnego
+                    *Kursy walutu pobrane z exchangerate-api.com
                 </Information>
               </>
             ))}
